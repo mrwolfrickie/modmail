@@ -251,7 +251,7 @@ class Modmail(commands.Bot):
         member = self.guild.get_member(user.id)
         avi = user.avatar_url
         time = datetime.datetime.utcnow()
-        desc = 'Modmail thread started.'
+        desc = 'Conversa do Modmail iniciada.'
         color = 0
 
         if member:
@@ -265,7 +265,7 @@ class Modmail(commands.Bot):
         em = discord.Embed(colour=color, description=desc, timestamp=time)
 
         em.add_field(name='Conta criada', value=str((time - user.created_at).days)+' dias atrás.')
-        em.set_footer(text='User ID: '+str(user.id))
+        em.set_footer(text='User ID'+str(user.id))
         em.set_thumbnail(url=avi)
         em.set_author(name=user, icon_url=server.icon_url)
       
@@ -298,11 +298,11 @@ class Modmail(commands.Bot):
         if mod:
             fmt.color=discord.Color.green()
             fmt.set_author(name=str(author), icon_url=author.avatar_url)
-            fmt.set_footer(text='Moderator')
+            fmt.set_footer(text='Moderador')
         else:
             fmt.color=discord.Color.gold()
             fmt.set_author(name=str(author), icon_url=author.avatar_url)
-            fmt.set_footer(text='User')
+            fmt.set_footer(text='Usuário')
 
         embed = None
 
