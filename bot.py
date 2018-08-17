@@ -153,8 +153,8 @@ class Modmail(commands.Bot):
         em.set_author(name='Mod Mail - Ajuda', icon_url=self.user.avatar_url)
         em.description = 'This bot is a python implementation of a stateless "Mod Mail" bot. ' \
                          'Made by Kyb3r and improved by the suggestions of others. This bot ' \
-                         'saves no data and utilises channel topics for storage and syncing.' \
-                         '**Este bot foi traduzido para Português pelo <@139834937120391168>'
+                         'saves no data and utilises channel topics for storage and syncing.\n' \
+                         '**Este bot foi traduzido para Português pelo <@139834937120391168>**'
                  
 
         cmds = f'`{prefix}setup [modrole] <- (opcional)` - Comando que configura o bot.\n' \
