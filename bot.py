@@ -219,7 +219,7 @@ class Modmail(commands.Bot):
             return await ctx.send('Este não é uma sessão de modmail.')
         user_id = int(ctx.channel.topic.split(': ')[1])
         user = self.get_user(user_id)
-        em = discord.Embed(title='Thread Closed')
+        em = discord.Embed(title='Conversa fechada')
         em.description = f'**{ctx.author}** fechou esta sessão de ModMail.'
         em.color = discord.Color.red()
         try:
