@@ -195,7 +195,7 @@ class Modmail(commands.Bot):
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def disable(self, ctx):
-        '''Feche todos as conversas e desative o modmail.'''
+        '''Feche todas as conversas e desative o modmail.'''
         categ = discord.utils.get(ctx.guild.categories, name='Mod Mail')
         if not categ:
             return await ctx.send('Este servidor não esta configurado.')
@@ -265,16 +265,16 @@ class Modmail(commands.Bot):
         em = discord.Embed(colour=color, description=desc, timestamp=time)
 
         em.add_field(name='Conta criada', value=str((time - user.created_at).days)+' dias atrás.')
-        em.set_footer(text='User ID'+str(user.id))
+        em.set_footer(text='ID de Usuário '+str(user.id))
         em.set_thumbnail(url=avi)
         em.set_author(name=user, icon_url=server.icon_url)
       
 
         if member:
             em.add_field(name='Entrou', value=str((time - member.joined_at).days)+' dias atrás.')
-            em.add_field(name='Membro Nr.',value=str(member_number),inline = True)
+            em.add_field(name='Membro Nº',value=str(member_number),inline = True)
             em.add_field(name='Nickname', value=member.nick, inline=True)
-            em.add_field(name='Roles', value=rolenames, inline=True)
+            em.add_field(name='Cargos', value=rolenames, inline=True)
         
         em.add_field(name='Mensagem', value=message.content, inline=False)
 
